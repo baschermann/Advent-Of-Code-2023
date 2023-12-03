@@ -13,7 +13,9 @@ public abstract class PuzzleSolver {
 
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         PuzzleSolver puzzleSolver = (PuzzleSolver) Class.forName(args[0]).getConstructor().newInstance();
-        String result = puzzleSolver.solveByFile(puzzleSolver.getClass().getSimpleName());
+        String className = puzzleSolver.getClass().getSimpleName();
+        String fileName = className.substring(0, className.length() - 2);
+        String result = puzzleSolver.solveByFile(fileName);
 
         System.out.println("-----------------------");
         System.out.println("---- Puzzle Result ----");
