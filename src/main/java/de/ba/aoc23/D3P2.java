@@ -43,6 +43,7 @@ public class D3P2 extends PuzzleSolver {
         for (HashSet<Number> gearsWithTwoNumber : gearsWithTwoNumbers) {
             result += gearsWithTwoNumber.stream().mapToInt(b -> b.value).reduce(1, (a, b) -> a * b);
         }
+
         return String.valueOf(result);
     }
 
