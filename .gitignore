@@ -13,3 +13,5 @@
 /.gradle/buildOutputCleanup/outputFiles.bin
 /.gradle/vcs-1/gc.properties
 /.gradle/file-system.probe
+/.gradle/
+/build/
